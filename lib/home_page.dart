@@ -1,27 +1,37 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:salon_app_final/salon_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
+import 'login.dart';
+import 'massage_page.dart';
 import 'profile_page.dart';
+import 'salons_page.dart';
 //import 'package:salon_proj/salon_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageWidgetState createState() => _HomePageWidgetState();
 }
 
 class _HomePageWidgetState extends State<HomePage> {
-  int _currentIndex = 0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
+    void logout() {
+      FirebaseAuth.instance.signOut().then((value) => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const LoginPage())));
+    }
+
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: Colors.deepPurple,
         automaticallyImplyLeading: false,
         title: const Text(
           'SALONS',
@@ -62,6 +72,9 @@ class _HomePageWidgetState extends State<HomePage> {
                   context,
                   MaterialPageRoute(builder: (context) => const ProfilePage()),
                 );
+              }
+              if (value == 4) {
+                logout();
               }
             },
           ),
@@ -174,7 +187,7 @@ class _HomePageWidgetState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const SalonPage()),
+                                  builder: (context) => const SalonsPage()),
                             );
                           },
                         ),
@@ -283,7 +296,7 @@ class _HomePageWidgetState extends State<HomePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const SalonPage()),
+                                              const MassagePage()),
                                     );
                                   },
                                 ),
