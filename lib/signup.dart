@@ -6,7 +6,7 @@ import 'welcome.dart';
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+  const SignUpPage({key});
 
   @override
   Widget build(BuildContext context) {

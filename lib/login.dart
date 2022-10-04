@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -168,6 +168,15 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(
             height: 20.0,
           ),
+          TextButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/locate');
+                },
+                icon: const Icon(Icons.create),
+                label: const Text(
+                  'Locate',
+                  style: TextStyle(fontSize: 40),
+                ))
           
         ],
       ),
