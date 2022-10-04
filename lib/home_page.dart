@@ -11,7 +11,7 @@ import 'salons_page.dart';
 //import 'package:salon_proj/salon_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api

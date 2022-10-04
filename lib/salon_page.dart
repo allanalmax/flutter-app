@@ -5,7 +5,7 @@ import 'home_page.dart';
 import 'constants.dart';
 
 class SalonPage extends StatelessWidget {
-  const SalonPage({super.key});
+  const SalonPage({key});
   Container HairStyles(String urlvalue) {
     return Container(
       width: 150.0,
@@ -277,6 +277,7 @@ class SalonPage extends StatelessWidget {
         onPressed: () {},
         label: Text('BOOK NOW'),
       ),
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.deepPurple,

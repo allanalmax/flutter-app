@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 class Welcome extends StatelessWidget {
-  const Welcome({super.key});
+  const Welcome({key});
 
   @override
   Widget build(BuildContext context) {
