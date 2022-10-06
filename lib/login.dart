@@ -25,19 +25,23 @@ class _LoginPageState extends State<LoginPage> {
         .then((value) {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const HomePage()));
-    }).onError((error, stackTrace) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        behavior: SnackBarBehavior.floating,
-        content: Container(
-          padding: const EdgeInsets.all(16.0),
-          height: 80.0,
-          decoration: const BoxDecoration(
-              color: Color(0xFFC72C41),
-              borderRadius: BorderRadius.all(Radius.circular(30))),
-          child: const Text("Wrong Credentials !"),
-        ),
-      ));
-    });
+    }).onError(
+      (error, stackTrace) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            content: Container(
+              padding: const EdgeInsets.all(16.0),
+              height: 80.0,
+              decoration: const BoxDecoration(
+                  color: Color(0xFFC72C41),
+                  borderRadius: BorderRadius.all(Radius.circular(30))),
+              child: const Text("Wrong Credentials !"),
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -57,7 +61,6 @@ class _LoginPageState extends State<LoginPage> {
                 fit: BoxFit.cover,
               )),
             ),
-<<<<<<< HEAD
             Container(
               margin: const EdgeInsets.only(left: 15.0, right: 15.0),
               width: MediaQuery.of(context).size.width,
@@ -171,32 +174,6 @@ class _LoginPageState extends State<LoginPage> {
               height: 18.0,
             ),
           ],
-=======
-            TextButton.icon(
-              onPressed: () {
-                Navigator.pushNamed(context, '/signup');
-              },
-              icon: const Icon(Icons.person),
-              label: const Text(
-                'Create',
-                style: TextStyle(fontSize: 40),
-              )
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            TextButton.icon(
-              onPressed: () {
-                Navigator.pushNamed(context, '/locate');
-              },
-              icon: Icon(Icons.create),
-              label: Text(
-                'Locate',
-                style: TextStyle(fontSize: 40),
-              )
-            ),
-          ]
->>>>>>> f8db6c8a7cb736218d64ed4250aabd3768d023fd
         ),
       ),
     );

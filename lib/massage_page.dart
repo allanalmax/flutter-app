@@ -11,11 +11,7 @@ import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class MassagePage extends StatefulWidget {
-<<<<<<< HEAD
   const MassagePage({Key key}) : super(key: key);
-=======
-  const MassagePage({key}) : super(key: key);
->>>>>>> f8db6c8a7cb736218d64ed4250aabd3768d023fd
 
   @override
   _MassagePageWidgetState createState() => _MassagePageWidgetState();
