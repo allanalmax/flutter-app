@@ -1,8 +1,10 @@
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:salon_app_final/home_page.dart';
-import 'welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+// ignore: unused_element
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
@@ -55,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 fit: BoxFit.cover,
               )),
             ),
+<<<<<<< HEAD
             Container(
               margin: const EdgeInsets.only(left: 15.0, right: 15.0),
               width: MediaQuery.of(context).size.width,
@@ -168,6 +171,32 @@ class _LoginPageState extends State<LoginPage> {
               height: 18.0,
             ),
           ],
+=======
+            TextButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/signup');
+              },
+              icon: const Icon(Icons.person),
+              label: const Text(
+                'Create',
+                style: TextStyle(fontSize: 40),
+              )
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            TextButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/locate');
+              },
+              icon: Icon(Icons.create),
+              label: Text(
+                'Locate',
+                style: TextStyle(fontSize: 40),
+              )
+            ),
+          ]
+>>>>>>> f8db6c8a7cb736218d64ed4250aabd3768d023fd
         ),
       ),
     );
