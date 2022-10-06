@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'booked_page.dart';
 import 'home_page.dart';
 import 'constants.dart';
 
@@ -23,6 +25,18 @@ class SalonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              launchUrl(Uri.parse('https://www.google.ca/maps'));
+            },
+            icon: const Icon(
+              Icons.pin_drop,
+              color: Colors.blue,
+              size: 35,
+            ),
+          ),
+        ],
         leading: GestureDetector(
           child: IconButton(
             onPressed: () {
@@ -274,10 +288,16 @@ class SalonPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.blue[300],
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const BookedPage(),
+            ),
+          );
+        },
         label: Text('BOOK NOW'),
       ),
-      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.deepPurple,

@@ -6,6 +6,7 @@ import 'welcome.dart';
 import 'login.dart';
 import 'signup.dart';
 import 'firebase_options.dart';
+import 'application_bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ Future<void> main() async {
       '/': (context) => const LoginPage(),
       '/signup': (context) => const SignUpPage(),
       '/home': (context) => const HomePage(),
-      '/locate':(context) => const Application(),
+      '/locate': (context) => const Application(),
     },
   ));
 }

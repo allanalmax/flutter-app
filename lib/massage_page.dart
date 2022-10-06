@@ -4,12 +4,14 @@
 
 import 'package:flutter/material.dart';
 
+import 'booked_page.dart';
 import 'home_page.dart';
 import 'salon_page.dart';
+import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class MassagePage extends StatefulWidget {
-  const MassagePage({Key? key}) : super(key: key);
+  const MassagePage({Key key}) : super(key: key);
 
   @override
   _MassagePageWidgetState createState() => _MassagePageWidgetState();
@@ -17,6 +19,7 @@ class MassagePage extends StatefulWidget {
 
 class _MassagePageWidgetState extends State<MassagePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +52,49 @@ class _MassagePageWidgetState extends State<MassagePage> {
         centerTitle: false,
         elevation: 2,
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedFontSize: 11,
+        iconSize: 18,
+        currentIndex: _currentIndex,
+        backgroundColor: Colors.deepPurple,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: ('Home'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_pin_rounded),
+            label: ('booked'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: ('settings'),
+            backgroundColor: Colors.blue,
+          ),
+        ],
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const HomePage()),
+            );
+          }
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const BookedPage()),
+            );
+          }
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsPage()),
+            );
+          }
+        },
+      ),
       backgroundColor: Colors.deepPurple,
       body: SafeArea(
         child: GestureDetector(
@@ -58,7 +104,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
             children: [
               Container(
                 width: double.infinity,
-                height: 650,
+                height: 640,
                 decoration: const BoxDecoration(
                   color: Color(0xFFF9F8FD),
                 ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'application_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({key});
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final applicationBloc = Provider.of<ApplicationBloc>(context);
     return Scaffold(
       body: (applicationBloc.currentLocation == null)
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : ListView(
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const TextField(
                   decoration: InputDecoration(hintText: 'Search Location'),
                 ),
-                Container(
+                SizedBox(
                   height: 300.0,
                   child: GoogleMap(
                     mapType: MapType.normal,
@@ -36,24 +37,29 @@ class _HomeScreenState extends State<HomeScreen> {
                         zoom: 14),
                   ),
                 ),
-                Row(children: [
-                  const Text("Search here",
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 35,
-                  
-                ),),
-                IconButton(
-                    onPressed: () {
-                      launchUrl(Uri.parse('https://www.google.ca/maps'));
-                    },
-                    icon: const Icon(
-                      Icons.search,
-                      color: Colors.blue,
-                      size: 35,
-                    ))
+                Row(
+                  children: [
+                    const Text(
+                      "Search here",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 35,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        launchUrl(Uri.parse('https://www.google.ca/maps'));
+                      },
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.blue,
+                        size: 35,
+                      ),
+                    ),
+                  ],
+                ),
               ],
-            )]));
-    
+            ),
+    );
   }
 }

@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:salon_app_final/salon_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
+import 'booked_page.dart';
 import 'constants.dart';
+import 'faqs_page.dart';
+import 'home_screen.dart';
 import 'login.dart';
 import 'massage_page.dart';
 import 'profile_page.dart';
 import 'salons_page.dart';
+import 'settings_page.dart';
+import 'support_page.dart';
 //import 'package:salon_proj/salon_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,12 +25,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     void logout() {
-      FirebaseAuth.instance.signOut().then((value) => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const LoginPage())));
+      FirebaseAuth.instance.signOut().then(
+            (value) => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const LoginPage()),
+            ),
+          );
     }
 
     return Scaffold(
@@ -73,6 +83,24 @@ class _HomePageWidgetState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => const ProfilePage()),
                 );
               }
+              if (value == 1) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SupportPage()),
+                );
+              }
+              if (value == 2) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FaqsPage()),
+                );
+              }
+              if (value == 3) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              }
               if (value == 4) {
                 logout();
               }
@@ -80,13 +108,46 @@ class _HomePageWidgetState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        height: 65,
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.book), label: 'Booked'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        backgroundColor: Colors.deepPurple,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: ('Home'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_pin_rounded),
+            label: ('booked'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: ('settings'),
+            backgroundColor: Colors.blue,
+          ),
         ],
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const HomePage()),
+            );
+          }
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const BookedPage()),
+            );
+          }
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsPage()),
+            );
+          }
+        },
       ),
       backgroundColor: kPrimaryColor,
       body: SafeArea(

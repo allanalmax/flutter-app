@@ -55,7 +55,6 @@ class _LoginPageState extends State<LoginPage> {
                 fit: BoxFit.cover,
               )),
             ),
-<<<<<<< HEAD
             Container(
               margin: const EdgeInsets.only(left: 15.0, right: 15.0),
               width: MediaQuery.of(context).size.width,
@@ -170,32 +169,6 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ],
         ),
-=======
-            TextButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/signup');
-                },
-                icon: const Icon(Icons.person),
-                label: const Text(
-                  'Create',
-                  style: TextStyle(fontSize: 40),
-                ))
-          ]),
-          const SizedBox(
-            height: 20.0,
-          ),
-          TextButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/locate');
-                },
-                icon: const Icon(Icons.create),
-                label: const Text(
-                  'Locate',
-                  style: TextStyle(fontSize: 40),
-                ))
-          
-        ],
->>>>>>> c643b584eb99e419d6a1422d77140ff5e16bcfdf
       ),
     );
   }
