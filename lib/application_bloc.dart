@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'geolocator_service.dart';
+// ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:geolocator/geolocator.dart';
 
 import 'home_screen.dart';
 
 class Application extends StatefulWidget {
-  const Application({Key key}) : super(key: key);
+  const Application({key}) : super(key: key);
 
   @override
   State<Application> createState() => _ApplicationState();

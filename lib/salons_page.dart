@@ -1,6 +1,6 @@
 //import '../flutter_flow/flutter_flow_theme.dart';
 //import '../flutter_flow/flutter_flow_util.dart';
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,7 @@ import 'salon_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class SalonsPage extends StatefulWidget {
-  const SalonsPage({Key? key}) : super(key: key);
+  const SalonsPage({key}) : super(key: key);
 
   @override
   _SalonsPageWidgetState createState() => _SalonsPageWidgetState();

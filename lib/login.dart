@@ -1,8 +1,10 @@
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:salon_app_final/home_page.dart';
-import 'welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+// ignore: unused_element
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class LoginPage extends StatefulWidget {
@@ -55,147 +57,31 @@ class _LoginPageState extends State<LoginPage> {
                 fit: BoxFit.cover,
               )),
             ),
-<<<<<<< HEAD
-            Container(
-              margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Hello",
-                    style: TextStyle(
-                      fontSize: 40.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[500],
-                    ),
-                  ),
-                  Text(
-                    "Sign in to your Account !",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.grey[500],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 18.0,
-                  ),
-                  TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                        hintText: "Email",
-                        prefixIcon: const Icon(
-                          Icons.email,
-                          color: Colors.blue,
-                        ),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0))),
-                  ),
-                  const SizedBox(
-                    height: 18.0,
-                  ),
-                  TextField(
-                    obscureText: true,
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                        hintText: "Password",
-                        prefixIcon: const Icon(
-                          Icons.lock,
-                          color: Colors.blue,
-                        ),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0))),
-                  ),
-                  const SizedBox(
-                    height: 18.0,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(child: Container()),
-                      const Text("Forgot your password ?")
-                    ],
-                  ),
-                  const SizedBox(height: 14.0),
-                  RichText(
-                      text: const TextSpan(
-                    text: "Don't Have an account ?",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 24.0,
-                    ),
-                  )),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            Row(children: [
-              Container(
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  height: MediaQuery.of(context).size.height * 0.07,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    image: const DecorationImage(
-                      image: AssetImage('images/button.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      signin();
-                    },
-                    child: const Center(
-                      child: Text(
-                        "Sign in",
-                        style: TextStyle(
-                          fontSize: 40.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  )),
-              TextButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/signup');
-                  },
-                  icon: const Icon(Icons.person),
-                  label: const Text(
-                    'Create',
-                    style: TextStyle(fontSize: 40),
-                  ))
-            ]),
-            const SizedBox(
-              height: 18.0,
-            ),
-          ],
-        ),
-=======
             TextButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/signup');
-                },
-                icon: const Icon(Icons.person),
-                label: const Text(
-                  'Create',
-                  style: TextStyle(fontSize: 40),
-                ))
-          ]),
-          const SizedBox(
-            height: 20.0,
-          ),
-          TextButton.icon(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/locate');
-                },
-                icon: const Icon(Icons.create),
-                label: const Text(
-                  'Locate',
-                  style: TextStyle(fontSize: 40),
-                ))
-          
-        ],
->>>>>>> c643b584eb99e419d6a1422d77140ff5e16bcfdf
+              onPressed: () {
+                Navigator.pushNamed(context, '/signup');
+              },
+              icon: const Icon(Icons.person),
+              label: const Text(
+                'Create',
+                style: TextStyle(fontSize: 40),
+              )
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            TextButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/locate');
+              },
+              icon: Icon(Icons.create),
+              label: Text(
+                'Locate',
+                style: TextStyle(fontSize: 40),
+              )
+            ),
+          ]
+        ),
       ),
     );
   }
