@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:salon_app_final/application_bloc.dart';
 import 'package:salon_app_final/home_page.dart';
+import 'package:salon_app_final/home_screen.dart';
 import 'login.dart';
 import 'signup.dart';
 import 'firebase_options.dart';
@@ -15,7 +16,7 @@ Future<void> main() async {
     routes: {
       '/': (context) => const LoginPage(),
       '/signup': (context) => const SignUpPage(),
-      '/home': (context) => const HomePage(),
+      '/home': (context) => const HomeScreen(),
       '/locate': (context) => const Application(),
     },
   ));
