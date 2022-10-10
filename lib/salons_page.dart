@@ -11,7 +11,6 @@ import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class SalonsPage extends StatefulWidget {
-
   const SalonsPage({key}) : super(key: key);
 
   @override

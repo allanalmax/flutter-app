@@ -1,6 +1,6 @@
 //import '../flutter_flow/flutter_flow_theme.dart';
 //import '../flutter_flow/flutter_flow_util.dart';
-// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, prefer_final_fields
 
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,6 @@ import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class MassagePage extends StatefulWidget {
-
   const MassagePage({key}) : super(key: key);
   
   @override
