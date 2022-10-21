@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:salon_app_final/application_bloc.dart';
 import 'package:salon_app_final/home_page.dart';
 import 'package:salon_app_final/home_screen.dart';
+import 'package:salon_app_final/payment/flutterwave.dart';
 import 'login.dart';
 import 'signup.dart';
 import 'firebase_options.dart';
@@ -14,7 +15,7 @@ Future<void> main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     routes: {
-      '/': (context) => const LoginPage(),
+      '/': (context) => SalonPay(),
       '/signup': (context) => const SignUpPage(),
       '/home': (context) => const HomeScreen(),
       '/locate': (context) => const Application(),
