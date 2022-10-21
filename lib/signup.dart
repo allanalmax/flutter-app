@@ -57,7 +57,8 @@ class SignUpPage extends StatelessWidget {
                 ),
                 const CircleAvatar(
                   radius: 50.0,
-                  backgroundImage: AssetImage('images/button.jpg'),
+                  // backgroundImage: AssetImage('images/button.jpg'),
+                  
                 )
               ])),
           Container(
@@ -69,13 +70,25 @@ class SignUpPage extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
+                RichText(
+                  text: const TextSpan(
+                    text: "Create account with Email and Password",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
                 TextField(
                   controller: emailController,
                   decoration: InputDecoration(
                       hintText: "Your Email",
                       prefixIcon: const Icon(
                         Icons.email,
-                        color: Colors.blue,
+                        color: Colors.deepPurple,
                       ),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30.0))),
@@ -90,7 +103,7 @@ class SignUpPage extends StatelessWidget {
                       hintText: "Password",
                       prefixIcon: const Icon(
                         Icons.lock,
-                        color: Colors.blue,
+                        color: Colors.deepPurple,
                       ),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30.0))),
@@ -105,14 +118,11 @@ class SignUpPage extends StatelessWidget {
             height: 20.0,
           ),
           Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            height: MediaQuery.of(context).size.height * 0.08,
+            width: MediaQuery.of(context).size.width * 0.4,
+            height: MediaQuery.of(context).size.height * 0.06,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              image: const DecorationImage(
-                image: AssetImage('images/button.jpg'),
-                fit: BoxFit.cover,
-              ),
+              color: Colors.deepPurple[200],
             ),
             child: GestureDetector(
               onTap: () {
@@ -132,15 +142,7 @@ class SignUpPage extends StatelessWidget {
           const SizedBox(
             height: 20.0,
           ),
-          RichText(
-            text: const TextSpan(
-              text: "Create account with Email and Password",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 20.0,
-              ),
-            ),
-          ),
+          
         ],
       ),
     ));

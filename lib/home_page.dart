@@ -1,16 +1,18 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import 'package:salon_app_final/salon_page.dart';
+import 'package:salon_app_final/salon_1.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'booked_page.dart';
 import 'constants.dart';
 import 'faqs_page.dart';
 import 'home_screen.dart';
-import 'login.dart';
+import 'login_page.dart';
 import 'massage_page.dart';
 import 'profile_page.dart';
-import 'salons_page.dart';
+import 'salon_page.dart';
 import 'settings_page.dart';
 import 'support_page.dart';
 //import 'package:salon_proj/salon_page.dart';
@@ -44,11 +46,14 @@ class _HomePageWidgetState extends State<HomePage> {
         backgroundColor: Colors.deepPurple,
         automaticallyImplyLeading: false,
         title: const Text(
-          'SALONS',
+          'SALON APP',
           textAlign: TextAlign.center,
-          style: TextStyle(),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 30.0,
+          ),
         ),
-        centerTitle: false,
+        centerTitle: true,
         elevation: 2,
         actions: [
           PopupMenuButton(
@@ -109,23 +114,26 @@ class _HomePageWidgetState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedFontSize: 18,
+        unselectedFontSize: 18,
+        iconSize: 20,
         currentIndex: _currentIndex,
         backgroundColor: Colors.deepPurple,
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: ('Home'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[300],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_pin_rounded),
             label: ('booked'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[300],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: ('settings'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[300],
           ),
         ],
         onTap: (index) {
@@ -158,7 +166,7 @@ class _HomePageWidgetState extends State<HomePage> {
             children: [
               Container(
                 width: double.infinity,
-                height: 1,
+                height: 40,
                 decoration: const BoxDecoration(
                   color: kPrimaryColor,
                 ),
@@ -191,10 +199,10 @@ class _HomePageWidgetState extends State<HomePage> {
                             height: 270,
                             decoration: BoxDecoration(
                               color: kPrimaryColor,
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
-                                  blurRadius: 4,
-                                  color: Color(0x2A000000),
+                                  blurRadius: 10,
+                                  color: Colors.deepPurple[200],
                                   offset: Offset(0, 2),
                                 )
                               ],
@@ -230,7 +238,10 @@ class _HomePageWidgetState extends State<HomePage> {
                                       12, 8, 12, 8),
                                   child: Text(
                                     'HAIR PLAITING  &',
-                                    style: TextStyle(),
+                                    style: TextStyle(
+                                      color: Colors.deepPurple,
+                                      fontSize: 18,
+                                    ),
                                   ),
                                 ),
                                 const Padding(
@@ -238,7 +249,10 @@ class _HomePageWidgetState extends State<HomePage> {
                                       12, 0, 12, 0),
                                   child: Text(
                                     'CUTING',
-                                    style: TextStyle(),
+                                    style: TextStyle(
+                                      color: Colors.deepPurple,
+                                      fontSize: 18,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -292,10 +306,10 @@ class _HomePageWidgetState extends State<HomePage> {
                                     height: 270,
                                     decoration: BoxDecoration(
                                       color: kPrimaryColor,
-                                      boxShadow: const [
+                                      boxShadow: [
                                         BoxShadow(
-                                          blurRadius: 4,
-                                          color: Color(0x2A000000),
+                                          blurRadius: 10,
+                                          color: Colors.deepPurple[200],
                                           offset: Offset(0, 2),
                                         )
                                       ],
@@ -336,7 +350,10 @@ class _HomePageWidgetState extends State<HomePage> {
                                                     12, 8, 12, 8),
                                             child: Text(
                                               'MASSAGE &',
-                                              style: TextStyle(),
+                                              style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 18,
+                                              ),
                                             ),
                                           ),
                                           const Padding(
@@ -345,7 +362,10 @@ class _HomePageWidgetState extends State<HomePage> {
                                                     12, 0, 0, 0),
                                             child: Text(
                                               'SPA',
-                                              style: TextStyle(),
+                                              style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 18, 
+                                              ),
                                             ),
                                           ),
                                         ],

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'booked_page.dart';
 import 'home_page.dart';
-import 'salon_page.dart';
+import 'salon_1.dart';
 import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
@@ -53,25 +53,26 @@ class _MassagePageWidgetState extends State<MassagePage> {
         elevation: 2,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 11,
-        iconSize: 18,
+        selectedFontSize: 18,
+        unselectedFontSize: 18,
+        iconSize: 20,
         currentIndex: _currentIndex,
         backgroundColor: Colors.deepPurple,
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: ('Home'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[200],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_pin_rounded),
             label: ('booked'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[200],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: ('settings'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[200],
           ),
         ],
         onTap: (index) {
@@ -104,7 +105,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
             children: [
               Container(
                 width: double.infinity,
-                height: 640,
+                height: 700,
                 decoration: const BoxDecoration(
                   color: Color(0xFFF9F8FD),
                 ),
@@ -119,7 +120,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                           padding:
                               EdgeInsetsDirectional.fromSTEB(8, 12, 12, 12),
                           child: Container(
-                            width: 340,
+                            width: 400,
                             height: 325,
                             decoration: BoxDecoration(
                               color: Color(0xFFF9F8FD),
@@ -136,8 +137,8 @@ class _MassagePageWidgetState extends State<MassagePage> {
                               child: Container(
                                 width: 120,
                                 height: 100,
-                                decoration: const BoxDecoration(
-                                  color: Color(0xFFF9F8FD),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurple[50],
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -157,7 +158,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    1, 1, 1, 1),
+                                                    20, 1, 1, 1),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(12),
@@ -174,7 +175,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 -0.96, 0.72),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 2, 0, 0),
+                                                  .fromSTEB(20, 2, 0, 0),
                                               child: Text(
                                                 'SERENITY SPA',
                                                 style: TextStyle(
@@ -218,7 +219,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                               EdgeInsetsDirectional.fromSTEB(8, 12, 12, 12),
                           child: InkWell(
                             child: Container(
-                              width: 340,
+                              width: 400,
                               height: 325,
                               decoration: BoxDecoration(
                                 color: Color(0xFFF9F8FD),
@@ -235,7 +236,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                 width: 120,
                                 height: 100,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFF9F8FD),
+                                  color: Colors.deepPurple[50],
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -255,7 +256,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    1, 1, 1, 1),
+                                                    20, 1, 1, 1),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(12),
@@ -272,7 +273,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 -0.96, 0.72),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 2, 0, 0),
+                                                  .fromSTEB(18, 2, 0, 0),
                                               child: Text(
                                                 'GLAM ICON SPA',
                                                 style: TextStyle(
@@ -284,7 +285,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                           ),
                                           const Align(
                                             alignment: AlignmentDirectional(
-                                                -0.5, 1.01),
+                                                -0.4, 1.01),
                                             child: Text(
                                               'Glam icon located in naguru next to olives\nrestuarant',
                                               style: TextStyle(),
@@ -316,7 +317,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                               EdgeInsetsDirectional.fromSTEB(8, 12, 12, 12),
                           child: InkWell(
                             child: Container(
-                              width: 340,
+                              width: 400,
                               height: 325,
                               decoration: BoxDecoration(
                                 color: Color(0xFFF9F8FD),
@@ -333,7 +334,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                 width: 120,
                                 height: 100,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFF9F8FD),
+                                  color: Colors.deepPurple[50],
                                 ),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -353,7 +354,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    1, 1, 1, 1),
+                                                    20, 1, 1, 1),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(12),
@@ -370,7 +371,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 -0.96, 0.72),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 2, 0, 0),
+                                                  .fromSTEB(19, 2, 0, 0),
                                               child: Text(
                                                 'BRAVADO SPA',
                                                 style: TextStyle(
@@ -382,7 +383,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                           ),
                                           const Align(
                                             alignment: AlignmentDirectional(
-                                                -0.5, 1.01),
+                                                -0.4, 1.01),
                                             child: Text(
                                               'Bravado massage spa is located in kikoni\nnext to the road',
                                               style: TextStyle(),
