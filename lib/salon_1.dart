@@ -6,8 +6,14 @@ import 'booked_page.dart';
 import 'home_page.dart';
 import 'constants.dart';
 
-class SalonPage extends StatelessWidget {
-  const SalonPage({key});
+class SalonOne extends StatefulWidget {
+  const SalonOne({key});
+
+  @override
+  State<SalonOne> createState() => _SalonOneState();
+}
+
+class _SalonOneState extends State<SalonOne> {
   Container HairStyles(String urlvalue) {
     return Container(
       width: 150.0,

@@ -6,14 +6,8 @@ import 'booked_page.dart';
 import 'home_page.dart';
 import 'constants.dart';
 
-class SalonTwo extends StatefulWidget {
-  const SalonTwo({key});
-
-  @override
-  State<SalonTwo> createState() => _SalonTwoState();
-}
-
-class _SalonTwoState extends State<SalonTwo> {
+class MassageTwo extends StatelessWidget {
+  const MassageTwo({key});
   Container HairStyles(String urlvalue) {
     return Container(
       width: 150.0,
@@ -78,7 +72,7 @@ class _SalonTwoState extends State<SalonTwo> {
                   child: Column(
                     children: [
                       Text(
-                        'Glam Icon Salon',
+                        'Glam Icon Spa',
                         style: TextStyle(
                           fontSize: 25.0,
                           fontFamily: 'Poppins',
@@ -128,23 +122,23 @@ class _SalonTwoState extends State<SalonTwo> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  HairStyles('images/hair1.jpeg'),
+                  HairStyles('images/massage1.jpeg'),
                   SizedBox(
                     width: 10,
                   ),
-                  HairStyles('images/trim1.jpeg'),
+                  HairStyles('images/massage2.jpeg'),
                   SizedBox(
                     width: 10,
                   ),
-                  HairStyles('images/hair2.jpeg'),
+                  HairStyles('images/massage3.jpeg'),
                   SizedBox(
                     width: 10,
                   ),
-                  HairStyles('images/hair3.jpeg'),
+                  HairStyles('images/massage4.jpeg'),
                   SizedBox(
                     width: 10,
                   ),
-                  HairStyles('images/trim2.jpeg'),
+                  HairStyles('images/massage5.jpeg'),
                 ],
               ),
             ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'home_page.dart';
+import 'payment/flutterwave.dart';
 import 'settings_page.dart';
 
 class BookedPage extends StatefulWidget {
@@ -54,7 +55,7 @@ class _BookedPageState extends State<BookedPage> {
           if (index == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const BookedPage()),
+              MaterialPageRoute(builder: (context) => const SalonPay()),
             );
           }
           if (index == 2) {

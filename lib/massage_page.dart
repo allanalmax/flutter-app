@@ -3,6 +3,9 @@
 // ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, prefer_final_fields
 
 import 'package:flutter/material.dart';
+import 'package:salon_app_final/massage_1.dart';
+import 'package:salon_app_final/massage_2.dart';
+import 'package:salon_app_final/massage_3.dart';
 
 import 'booked_page.dart';
 import 'home_page.dart';
@@ -42,14 +45,15 @@ class _MassagePageWidgetState extends State<MassagePage> {
         ),
         backgroundColor: Colors.deepPurple,
         title: const Text(
-          'SALONS',
+          'SALON APP',
           style: TextStyle(
             fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 22,
+            fontSize: 30,
           ),
         ),
-        centerTitle: false,
+        centerTitle: true,
         elevation: 2,
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -180,7 +184,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 'SERENITY SPA',
                                                 style: TextStyle(
                                                   fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  color: Colors.deepPurple,
                                                 ),
                                               ),
                                             ),
@@ -203,7 +207,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const SalonPage()),
+                                      builder: (context) => const MassageOne()),
                                 );
                               },
                             ),
@@ -278,7 +282,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 'GLAM ICON SPA',
                                                 style: TextStyle(
                                                   fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  color: Colors.deepPurple,
                                                 ),
                                               ),
                                             ),
@@ -302,7 +306,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SalonPage()),
+                                    builder: (context) => const MassageTwo()),
                               );
                             },
                           ),
@@ -376,7 +380,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                                                 'BRAVADO SPA',
                                                 style: TextStyle(
                                                   fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  color: Colors.deepPurple,
                                                 ),
                                               ),
                                             ),
@@ -400,7 +404,7 @@ class _MassagePageWidgetState extends State<MassagePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SalonPage()),
+                                    builder: (context) => const MassageThree()),
                               );
                             },
                           ),

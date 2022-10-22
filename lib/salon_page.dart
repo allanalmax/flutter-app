@@ -3,10 +3,12 @@
 // ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:salon_app_final/salon_2.dart';
 
 import 'booked_page.dart';
 import 'home_page.dart';
 import 'salon_1.dart';
+import 'salon_3.dart';
 import 'settings_page.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
@@ -205,7 +207,7 @@ class _SalonsPageWidgetState extends State<SalonsPage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const SalonPage()),
+                                      builder: (context) => const SalonOne()),
                                 );
                               },
                             ),
@@ -304,7 +306,7 @@ class _SalonsPageWidgetState extends State<SalonsPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SalonPage()),
+                                    builder: (context) => const SalonTwo()),
                               );
                             },
                           ),
@@ -402,7 +404,7 @@ class _SalonsPageWidgetState extends State<SalonsPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SalonPage()),
+                                    builder: (context) => const SalonThree()),
                               );
                             },
                           ),
